@@ -1,7 +1,7 @@
 // Import Router configuration
 
 const login = require('./router.config.js');
-// const conn = require('./../config/dev.js').CONN;
+const conn = require('./../config/dev.js').CONN;
 
 login.get('/login/test', (req, res)=>{
   console.log('Base login route hit!');

@@ -3,7 +3,9 @@ const express = require('express')
     , bodyParser = require('body-parser')
     , server = require('http').Server(app);
 
-const login = require('./routes/login.js');
+const login = require('./routes/login.js')
+    , userAddress = require('./routes/userAddress.js')
+    , user = require('./routes/user.js');
 
 
 app.use((req, res, next) => {
@@ -26,7 +28,7 @@ app.use(express.static('./../'));
 app.use('/',(req,res,next)=>{
  console.log('inside routes');
  next();
-}, login);
+}, login, userAddress, user);
 
 
 

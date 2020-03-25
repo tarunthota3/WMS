@@ -2,9 +2,9 @@ var mysql = require('mysql');
 
 function mySql() {
   let conn = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1234",
+    host: "spring2020dbthota.cesjud7fuq8g.us-east-1.rds.amazonaws.com",
+    user: "tthota",
+    password: "ABCabc123!",
     database: "wholesale_sys",
     multipleStatements: true
   });
