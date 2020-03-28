@@ -3,6 +3,9 @@ import { Accordion, Icon, Grid, Table } from 'semantic-ui-react'
 import request from 'superagent';
 import UserAddress from './userAddress.jsx';
 import UserDetails from './userDetails.jsx';
+import ItemDetails from './itemDetails.jsx';
+import Messagecontent from './messagecontent.jsx';
+import UserData from './userData.jsx';
 const serverURL = require('./config/dev.js').serverURL;
 
 
@@ -54,10 +57,44 @@ class App extends React.Component {
                      <Accordion.Content active={activeIndex === 1}>
                         <UserDetails />
                      </Accordion.Content>
+                     <Accordion.Title
+                        active={activeIndex === 2}
+                        index={2}
+                        onClick={this.handleClick}
+                     >
+                        <Icon name='dropdown' />
+         Fetching vendor details based on product
+        </Accordion.Title>
+                     <Accordion.Content active={activeIndex === 2}>
+                        <ItemDetails />
+                     </Accordion.Content>
+                     <Accordion.Title
+                        active={activeIndex === 3}
+                        index={3}
+                        onClick={this.handleClick}
+                     >
+                        <Icon name='dropdown' />
+         Fetching message content and user details
+        </Accordion.Title>
+                     <Accordion.Content active={activeIndex === 3}>
+                        <Messagecontent />
+                     </Accordion.Content>
+                     <Accordion.Title
+                        active={activeIndex === 4}
+                        index={4}
+                        onClick={this.handleClick}
+                     >
+                        <Icon name='dropdown' />
+         Fetching user details
+        </Accordion.Title>
+                     <Accordion.Content active={activeIndex === 4}>
+                        <UserData />
+                     </Accordion.Content>
                   </Accordion>
                </Grid.Column>
             </Grid.Row>
          </Grid>
+         
 
       );
    }

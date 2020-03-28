@@ -5,7 +5,9 @@ const express = require('express')
 
 const login = require('./routes/login.js')
     , userAddress = require('./routes/userAddress.js')
-    , user = require('./routes/user.js');
+    , user = require('./routes/user.js')
+    , item = require('./routes/item.js')
+    , message = require('./routes/message.js');
 
 
 app.use((req, res, next) => {
@@ -28,7 +30,7 @@ app.use(express.static('./../'));
 app.use('/',(req,res,next)=>{
  console.log('inside routes');
  next();
-}, login, userAddress, user);
+}, login, userAddress, user, item, message);
 
 
 
