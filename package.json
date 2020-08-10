@@ -20,6 +20,6 @@
     "semantic-ui-react": "^0.88.2",
     "superagent": "^5.2.2",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^3.1.11"
   }
 }
